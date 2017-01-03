@@ -1,29 +1,8 @@
 <nav id="menu">
 	<ul class="nav main-nav">		
-		<li style="border: 2px solid #0bcdd9; padding: 0.25em 7.5px;line-height: 1em;" id="kataCount"></li>
+		<li style="border: 2px solid #0bcdd9; padding: 0.25em 7.5px;line-height: 1em;" id="kataCount">3</li>
 		{{#foreach navigation}}
 		<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
 		{{/foreach}}
 	</ul>
 </nav>
-<script>
-	function kataCount() {
-			var date1 = new Date(2017, 00, 01);
-			var date2 = Date.now();
-
-			// The number of milliseconds in one day
-			var ONE_DAY = 1000 * 60 * 60 * 24
-
-			// Convert both dates to milliseconds
-			var date1_ms = date1.getTime()
-			var date2_ms = date2
-
-			// Calculate the difference in milliseconds
-			var difference_ms = Math.abs(date1_ms - date2_ms)
-
-			// Convert back to days and return
-			return Math.round(difference_ms/ONE_DAY)
-
-	}
-	document.querySelector('#kataCount').innerHTML = kataCount();
-</script>
