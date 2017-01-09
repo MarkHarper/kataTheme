@@ -16,3 +16,8 @@
   padding-top: 0 !important;
   border-top: none !important;
 }
+
+pre code {  
+    word-wrap: normal;
+    white-space: pre;
+}
